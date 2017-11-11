@@ -8,11 +8,14 @@ fpsClock= pygame.time.Clock()
 DISPLAYSURF=pygame.display.set_mode((600,600),0,32)
 
 pygame.display.set_caption("new game")
-
+dimg1=pygame.image.load("doorclosed.png")
 WHITE=(255,255,255)
 gimg=pygame.image.load('pinkgirl.png')
+dimg1 = pygame.transform.scale(dimg1,(60, 100))
 gx=10
 gy=10
+dx=500
+dy=0
 direction='right'
 
 while True:
@@ -35,7 +38,7 @@ while True:
         if gy ==10:
             direction='right'
     DISPLAYSURF.blit(gimg,(gx,gy))
-    
+    DISPLAYSURF.blit(dimg1,(dx,dy))
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
