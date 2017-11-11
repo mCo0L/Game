@@ -1,3 +1,2 @@
-# Game
-PyGame try game
+# Game {Maria}
 Tried making a simple game using PyGame at a PyDelhi community event.
