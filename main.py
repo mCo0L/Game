@@ -1,6 +1,21 @@
 import pygame,sys
 from pygame.locals import *
 
+def nextlevel(level, score):
+    pass
+
+def gameover(level, score):
+    pass
+
+def loadbricks(level):
+    pass
+    
+
+def loadLevel(level):
+    locatebricks(level)
+    locatekeys(level)
+    locatedevils(level)
+    
 pygame.init()
 BLACK=(0,0,0)
 FPS=30
