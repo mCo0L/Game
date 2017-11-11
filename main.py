@@ -1,7 +1,7 @@
 import pygame,sys
 from pygame.locals import *
 
-def nextlevel(level, score):
+'''def nextlevel(level, score):
     pass
 
 def gameover(level, score):
@@ -14,7 +14,7 @@ def loadbricks(level):
 def loadLevel(level):
     locatebricks(level)
     locatekeys(level)
-    locatedevils(level)
+    locatedevils(level)'''
     
 pygame.init()
 BLACK=(0,0,0)
@@ -31,7 +31,7 @@ brick=pygame.image.load('brick.png')
 brick = pygame.transform.scale(brick,(40, 40))
 gx=0
 gy=480
-dx=500
+dx=740
 dy=0
 direction='right'
 bx=0
@@ -64,7 +64,7 @@ while True:
     DISPLAYSURF.blit(dimg1,(dx,dy))
     base = 0
     while base<1200:
-        DISPLAYSURF.blit(brick,(0,base+40))
+        DISPLAYSURF.blit(brick,(base,540))
         base = base+40
         
     
