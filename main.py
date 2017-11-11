@@ -66,8 +66,8 @@ while True:
     while base<1200:
         DISPLAYSURF.blit(brick,(0,base+40))
         base = base+40
-    #gx=checkbound(gx,gy)
-    #gy=checkbound(gx,gy)
+        
+    
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
