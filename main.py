@@ -10,7 +10,8 @@ def gameover(level, score):
 def loadbricks(level):
     if level==1:
         brickloc=[(14,11),(15,11),(4,10),(5,10),(6,10),(11,9),(12,9),(13,9),(3,8),(4,8),(7,7),(8,7),(13,6),(14,6),(15,6),(3,5),(4,5),(12,4),(13,4),(2,3),(3,3),(4,3),(12,2),(13,2)]
-    pass
+
+    return brickloc
     
 
 '''def loadLevel(level):
@@ -66,7 +67,9 @@ while True:
 
     DISPLAYSURF.blit(gimg,(gx,gy))
     DISPLAYSURF.blit(dimg1,(dx,dy))
-
+    brickloc = loadbricks(1)
+    for bloc in brickloc:
+            DISPLAYSURF.blit(brick,(bloc[0]*40, bloc[1]*40)) 
     base = 0
     while base<1200:
         DISPLAYSURF.blit(brick,(base,540))
@@ -83,6 +86,7 @@ while True:
                 if (loc[0]*40-40)>=0:
                     gx -=40
                     loc[0] -= 1
+                
                     print("location: ",loc)
             elif event.key == K_RIGHT:
                 if (loc[0]*40+40)<=760:
