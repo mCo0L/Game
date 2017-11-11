@@ -35,6 +35,8 @@ dx=740
 dy=0
 direction='right'
 bx=0
+
+loc = [0,12]
 def checkbound(x,y):
     if (x<0):
         return 0
@@ -75,13 +77,25 @@ while True:
         elif event.type == KEYDOWN:
             keyPressed = True
             if event.key == K_LEFT:
-                gx -=40
+                if (loc[0]*40-40)>=0:
+                    gx -=40
+                    loc[0] -= 1
+                    print("location: ",loc)
             elif event.key == K_RIGHT:
-                gx +=40
+                if (loc[0]*40+40)<=760:
+                    gx +=40
+                    loc[0] += 1
+                    print("location: ",loc)
             elif event.key == K_UP:
-                gy -=40
+                if (loc[1]*40-40)>=0:
+                    gy -=40
+                    loc[1] -= 1
+                    print("location: ",loc)
             elif event.key == K_DOWN:
-                gy +=40
+                if (loc[1]*40+40)<=480:
+                    gy +=40
+                    loc[1] += 1
+                    print("location: ",loc)
     pygame.display.update()
     fpsClock.tick(FPS) 
     
