@@ -10,7 +10,7 @@ DISPLAYSURF=pygame.display.set_mode((600,600),0,32)
 pygame.display.set_caption("new game")
 
 WHITE=(255,255,255)
-gimg=pygame.image.load('devil.png')
+gimg=pygame.image.load('pinkgirl.png')
 gx=10
 gy=10
 direction='right'
