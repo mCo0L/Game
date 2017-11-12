@@ -44,12 +44,12 @@ pygame.init()
 
 FPS=30
 BLACK=(0,0,0)
-WHITE=(255,255,255)
+GREEN=(0,255,50)
 fpsClock= pygame.time.Clock()
 
 DISPLAYSURF=pygame.display.set_mode((800,600))
 pygame.display.set_caption("GoMaria")
-
+#back= pygame.image.load('background.jpg')
 maria = pygame.image.load('pinkgirl.png')
 maria = pygame.transform.scale(maria,(40, 60))
 doorClosed = pygame.image.load("doorclosed.png")
@@ -65,7 +65,8 @@ level = 1
 
 
 while True:
-    DISPLAYSURF.fill(WHITE)
+    DISPLAYSURF.fill(GREEN)
+    #DISPLAYSURF.blit(back,(0,0))
     DISPLAYSURF.blit(maria,(girlLoc[0]*40,girlLoc[1]*40))
     DISPLAYSURF.blit(doorClosed,(doorLoc[0]*40,doorLoc[1]*40))
     brickloc,keysloc = loaditems(level)
