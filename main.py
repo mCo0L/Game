@@ -43,6 +43,11 @@ def getLocation(currLoc, action):
         return newLoc
     else:
         return currLoc
+def checkpoints():
+    if len(keysloc)==0:
+        global doorClosed
+        doorClosed = pygame.image.load("dooropen.png")
+        doorClosed = pygame.transform.scale(doorClosed,(60, 100))
 
 
 pygame.init()
@@ -95,6 +100,7 @@ while True:
             keyPressed = True
             action = event.key
             girlLoc = getLocation(girlLoc, action)
+            checkpoints()
             print("Location: ",girlLoc)
 
 
