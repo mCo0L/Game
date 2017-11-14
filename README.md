@@ -17,5 +17,7 @@ dependencies
 HOW TO RUN
 
 1- clone the github project
+
 2- in the project folder run the main.py file using python
+
 3- play and enjoy
