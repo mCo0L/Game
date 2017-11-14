@@ -32,12 +32,12 @@ def getLocation(currLoc, action):
         newLoc[1] += 1
         
     if newLoc in brickloc:
-        print("Nope lol")
+        #print("Nope lol")
         return currLoc
     if newLoc in keysloc:
         global keysloc
         keysloc.pop(keysloc.index(newLoc))
-        print(keysloc)
+        #print(keysloc)
         return newLoc
     
             
@@ -119,7 +119,7 @@ while True:
             f=1
         
         
-            print("Location: ",girlLoc)
+            #print("Location: ",girlLoc)
 
 
     pygame.display.update()
