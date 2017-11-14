@@ -42,7 +42,7 @@ def getLocation(currLoc, action):
     
     if newLoc in doorLoc2:
         DISPLAYSURF.blit(gameove,(0,0))
-        pygame.time.wait(5000)
+        
         
     
     elif (newLoc[0] <= 19 and newLoc[0] >= 0 ) and (newLoc[1] <= 13 and newLoc[1] >= 0):
