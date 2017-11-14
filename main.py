@@ -40,15 +40,18 @@ def getLocation(currLoc, action):
         print(keysloc)
         return newLoc
     
-    if newLoc in doorLoc2:
-        DISPLAYSURF.blit(gameove,(0,0))
-        
+            
         
     
     elif (newLoc[0] <= 19 and newLoc[0] >= 0 ) and (newLoc[1] <= 13 and newLoc[1] >= 0):
         return newLoc
     else:
         return currLoc
+    
+def checkquit():
+    if f==1:
+        pygame.time.delay(3000)   
+        sys.exit()
 def checkpoints():
     if len(keysloc)==0:
         global doorClosed
@@ -76,7 +79,7 @@ gameove = pygame.image.load('gameover.png')
 gameove = pygame.transform.scale(gameove,(800,600))
 key = pygame.image.load('key.png')
 key = pygame.transform.scale(key,(40, 40))
-
+f=0
 girlLoc =[0, 13]
 doorLoc = [18,0]
 doorLoc2=[[18,0],[18,1]]
@@ -110,11 +113,19 @@ while True:
             action = event.key
             girlLoc = getLocation(girlLoc, action)
             checkpoints()
+        if girlLoc in doorLoc2:
+            DISPLAYSURF.blit(gameove,(0,0))
+            global f
+            f=1
+        
+        
             print("Location: ",girlLoc)
 
 
     pygame.display.update()
-    fpsClock.tick(FPS) 
+    fpsClock.tick(FPS)
+    checkquit()
+     
     
 
 
