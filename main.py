@@ -1,5 +1,6 @@
 import pygame,sys
 from pygame.locals import *
+import time
 
 '''def nextlevel(level, score):
     pass
@@ -39,6 +40,11 @@ def getLocation(currLoc, action):
         print(keysloc)
         return newLoc
     
+    if newLoc in doorLoc2:
+        DISPLAYSURF.blit(gameove,(0,0))
+        pygame.time.wait(5000)
+        
+    
     elif (newLoc[0] <= 19 and newLoc[0] >= 0 ) and (newLoc[1] <= 13 and newLoc[1] >= 0):
         return newLoc
     else:
@@ -66,11 +72,14 @@ doorClosed = pygame.image.load("doorclosed.png")
 doorClosed = pygame.transform.scale(doorClosed,(60, 100))
 brick = pygame.image.load('brick.png')
 brick = pygame.transform.scale(brick,(40, 40))
+gameove = pygame.image.load('gameover.png')
+gameove = pygame.transform.scale(gameove,(800,600))
 key = pygame.image.load('key.png')
 key = pygame.transform.scale(key,(40, 40))
 
 girlLoc =[0, 13]
 doorLoc = [18,0]
+doorLoc2=[[18,0],[18,1]]
 level = 1
 brickloc,keysloc = loaditems(level)
 
