@@ -7,7 +7,9 @@ A simple game made using the pygame library . In this game the girl has to colle
 dependencies
 
  1-pygame
+ 
  2-sys
+ 
  3-time
 
 
